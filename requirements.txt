@@ -1,0 +1,3 @@
+requests
+matrix-nio[e2e]
+git+https://codeberg.org/imbev/simplematrixbotlib

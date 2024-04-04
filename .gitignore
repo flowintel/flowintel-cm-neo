@@ -1,0 +1,5 @@
+
+config/config.py
+bin/store/*
+bin/session.txt
+*.pyc
