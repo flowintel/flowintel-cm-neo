@@ -12,7 +12,7 @@ from os.path import dirname, abspath
 d = dirname(dirname(abspath(__file__)))
 sys.path.append(os.path.join(d, "config"))
 import config as Config
-from help import help
+from help import help, help_task, help_case
 
 from case_function import case_check
 from task_function import task_check
@@ -37,6 +37,16 @@ async def echo(room, message):
     if match.is_not_from_this_bot() and match.prefix():
         if match.command("help"):
             loc_message = help()
+            last_command = message
+            await bot.api.send_markdown_message(room.room_id, loc_message, reply_to=message.event_id)
+
+        if match.command("help_case"):
+            loc_message = help_case()
+            last_command = message
+            await bot.api.send_markdown_message(room.room_id, loc_message, reply_to=message.event_id)
+
+        if match.command("help_task"):
+            loc_message = help_task()
             last_command = message
             await bot.api.send_markdown_message(room.room_id, loc_message, reply_to=message.event_id)
 
