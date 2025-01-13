@@ -15,7 +15,7 @@ def help():
     ## Task command
     help += help_task(False)
 
-    help = "```\n"
+    help += "```\n"
     return help
 
 
@@ -41,7 +41,7 @@ def help_case(standalone=True):
     help += "case_modify_status: Modify status of the case.\n\t!case_modify_status case_id status_id\n"
 
     if standalone:
-        help = "```\n"
+        help += "```\n"
 
     return help
 
@@ -69,6 +69,6 @@ def help_task(standalone=True):
     help += "task_modify_status: Modify status of the task.\n\t!task_modify_status task_id status_id\n"
 
     if standalone:
-        help = "```\n"
+        help += "```\n"
 
     return help
